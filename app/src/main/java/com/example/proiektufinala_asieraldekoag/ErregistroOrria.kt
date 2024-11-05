@@ -1,6 +1,7 @@
 package com.example.proiektufinala_asieraldekoag
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -36,8 +37,10 @@ class ErregistroOrria : AppCompatActivity() {
         EgoitzaSpinner = findViewById(R.id.spnEgoitza)
         Erregistratu = findViewById(R.id.btnErregistroa)
 
-
-
+        //Valores del SPINNER
+        val ListakoAukerak = arrayOf("Bartzelona","Madril","Valentzia")
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, ListakoAukerak)
+        EgoitzaSpinner.setAdapter(adapter)
 
 
     }
