@@ -1,6 +1,7 @@
 package com.example.proiektufinala_asieraldekoag
 
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.CheckBox

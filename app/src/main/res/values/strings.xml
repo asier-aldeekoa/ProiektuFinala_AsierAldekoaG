@@ -1,11 +1,16 @@
 <resources>
     <string name="app_name">ProiektuFinala_AsierAldekoaG</string>
+    //Label Izenak
     <string name="lblErab">Erabiltzaile Izena</string>
     <string name="lblPosta">Posta Elektronikoa</string>
     <string name="lblPass">Pasahitza</string>
     <string name="lblGeneroa">Generoa</string>
-    //as
     <string name="lblEgoitza">Egoitza</string>
-
-
+    //Button Izenak
+    <string name="btnGizona">Gizona</string>
+    <string name="btnEmakumea">Emakumea</string>
+    <string name="btnBestea">Bestea</string>
+    <string name="btnErregistroa">Erregistratu</string>
+    //CheckBox Izenak
+    <string name="chkAdina">Baldintzak eta terminoak onartzen dituzu</string>
 </resources>
