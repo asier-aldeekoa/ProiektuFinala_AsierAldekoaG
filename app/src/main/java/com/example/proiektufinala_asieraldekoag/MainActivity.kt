@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         screemSplash.setKeepOnScreenCondition{ false }
     }
     fun Logeatu() {
+
     }
     fun Erregistroa() {
         val intent = Intent(this, ErregistroOrria::class.java)
