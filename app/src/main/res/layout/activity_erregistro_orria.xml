@@ -10,10 +10,10 @@
 
     <TextView
         android:id="@+id/lblErab"
+        android:text="@string/lblErab"
         android:layout_width="150dp"
         android:layout_height="45dp"
         android:gravity="center"
-        android:text="Erabiltzaile Izena"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,10 +66,10 @@
 
     <TextView
         android:id="@+id/lblPass"
+        android:text="@string/lblPass"
         android:layout_width="150dp"
         android:layout_height="45dp"
         android:gravity="center"
-        android:text="Pasahitza"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,10 +80,10 @@
 
     <TextView
         android:id="@+id/lblGeneroa"
+        android:text="@string/lblGeneroa"
         android:layout_width="150dp"
         android:layout_height="45dp"
         android:gravity="center"
-        android:text="Generoa"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,10 +94,10 @@
 
     <TextView
         android:id="@+id/lblEgoitza"
+        android:text="@string/lblEgoitza"
         android:layout_width="150dp"
         android:layout_height="45dp"
         android:gravity="center"
-        android:text="Egoitza"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -169,10 +169,10 @@
 
     <TextView
         android:id="@+id/lblPosta"
+        android:text="@string/lblPosta"
         android:layout_width="150dp"
         android:layout_height="45dp"
         android:gravity="center"
-        android:text="Posta Elektronikoa"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
