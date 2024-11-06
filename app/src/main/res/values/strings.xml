@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">ProiektuFinala_AsierAldekoaG</string>
+    //Izenak MainActivity
+    <string name="lblErab">POSTA ELEKTRONIKOA: </string>
+    <string name="lblPass">PASAHITZA: </string>
+    <string name="txtPosta">Jarri zure POSTA</string>
+    <string name="txtPass">Jarri zure PASAHITZA</string>
+    <string name="btnLogin">LOGIN</string>
+    <string name="btnErregistratu">ERREGISTRATU</string>
+
     //Button Izenak
     <string name="btnGizona">Gizona</string>
     <string name="btnEmakumea">Emakumea</string>
