@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ProiektuFinala_AsierAldekoaG"
         tools:targetApi="31">
         <activity
+            android:name=".MainPage"
+            android:exported="false" />
+        <activity
             android:name=".ErregistroOrria"
             android:exported="false" />
         <activity

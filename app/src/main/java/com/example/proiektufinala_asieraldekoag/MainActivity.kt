@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -34,7 +35,31 @@ class MainActivity : AppCompatActivity() {
         screemSplash.setKeepOnScreenCondition{ false }
     }
     fun Logeatu() {
+        val postaE = PostaElektronikoa.text.toString().trim()
+        val pasahitza = Pasahitza.text.toString().trim()
 
+        if (postaE.isEmpty() || pasahitza.isEmpty()) {
+            Toast.makeText(this, "Mesedez datu guztiak sartu", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val admin = SQL_User_Database(this, "Altzairuen_Denda.db", null, 1)
+        val bd = admin.readableDatabase
+
+        val cursor = bd.rawQuery(
+            "SELECT * FROM erabiltzaileak WHERE posta = ? AND pass = ?",
+            arrayOf(postaE, pasahitza)
+        )
+
+        if (cursor.moveToFirst()) {
+            Toast.makeText(this, "Saioa ongi hasi da!", Toast.LENGTH_SHORT).show()
+
+        } else {
+            Toast.makeText(this, "Gmail-a edo pasahitza txarto dago", Toast.LENGTH_SHORT).show()
+        }
+
+        cursor.close()
+        bd.close()
     }
     fun Erregistroa() {
         val intent = Intent(this, ErregistroOrria::class.java)
