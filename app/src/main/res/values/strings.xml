@@ -2,17 +2,20 @@
     <string name="app_name">ProiektuFinala_AsierAldekoaG</string>
     //Izenak MainActivity
     <string name="lblErab">POSTA ELEKTRONIKOA: </string>
-    <string name="lblPass">PASAHITZA: </string>
     <string name="txtPosta">Jarri zure POSTA</string>
+    <string name="lblPass">PASAHITZA: </string>
     <string name="txtPass">Jarri zure PASAHITZA</string>
     <string name="btnLogin">LOGIN</string>
     <string name="btnErregistratu">ERREGISTRATU</string>
 
-    //Button Izenak
+    //Izenak ErregistroOrria
+    <string name="txtErab">ERABILTZAILEA</string>
+    <string name="txtPostaE">POSTA</string>
     <string name="btnGizona">Gizona</string>
     <string name="btnEmakumea">Emakumea</string>
     <string name="btnBestea">Bestea</string>
     <string name="btnErregistroa">Erregistratu</string>
+
     //CheckBox Izenak
     <string name="chkAdina">Baldintzak eta terminoak onartzen dituzu</string>
 </resources>
