@@ -1,20 +1,38 @@
 package com.example.proiektufinala_asieraldekoag
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
+import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main_page)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+    }
+    //Una funcion que sobreescriba el menu
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+    //Una funcion que sobreescriba la funcionpara q actuen nuestros botones
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.ireki -> {
+                Toast.makeText(this,"Gorde botoia sakatu da",Toast.LENGTH_LONG )
+                return true
+            }
+            R.id.gorde -> {
+                Toast.makeText(this,"Ireki botoia sakatu da",Toast.LENGTH_LONG )
+                return true
+            }
+            R.id.irten -> {
+                finish()
+                return true
+            }
         }
+        return super.onOptionsItemSelected(item)
     }
 }

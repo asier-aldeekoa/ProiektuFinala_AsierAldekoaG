@@ -2,14 +2,12 @@ package com.example.proiektufinala_asieraldekoag
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     lateinit var PostaElektronikoa: EditText
@@ -53,6 +51,10 @@ class MainActivity : AppCompatActivity() {
 
         if (cursor.moveToFirst()) {
             Toast.makeText(this, "Saioa ongi hasi da!", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MainPage::class.java)
+            startActivity(intent)
+
+            Log.d("MainActivity", "Login successful, launching MainPage")
 
         } else {
             Toast.makeText(this, "Gmail-a edo pasahitza txarto dago", Toast.LENGTH_SHORT).show()
@@ -62,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         bd.close()
     }
     fun Erregistroa() {
-        val intent = Intent(this, ErregistroOrria::class.java)
-        startActivity(intent)
+        val intent1 = Intent(this, ErregistroOrria::class.java)
+        startActivity(intent1)
     }
 }

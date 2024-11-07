@@ -12,9 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProiektuFinala_AsierAldekoaG"
         tools:targetApi="31">
+
         <activity
             android:name=".MainPage"
-            android:exported="false" />
+            android:exported="true">
+        </activity>
+
         <activity
             android:name=".ErregistroOrria"
             android:exported="false" />
