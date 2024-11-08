@@ -31,14 +31,16 @@ class MainPage : AppCompatActivity() {
             }
             R.id.saioaitxi -> {
                 Toast.makeText(this, "Saioa ITXI egin da", Toast.LENGTH_LONG).show()
-                return true
+
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
 
                 finish()
+                return true
             }
             R.id.irten -> {
-                finish()
+                finishAffinity()
+                System.exit(0)
                 return true
             }
         }
