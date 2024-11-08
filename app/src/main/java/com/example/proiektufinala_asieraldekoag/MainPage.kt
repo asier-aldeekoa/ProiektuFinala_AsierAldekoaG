@@ -1,5 +1,6 @@
 package com.example.proiektufinala_asieraldekoag
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -20,13 +21,21 @@ class MainPage : AppCompatActivity() {
     //Una funcion que sobreescriba la funcionpara q actuen nuestros botones
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.ireki -> {
+            R.id.altzariberria -> {
                 Toast.makeText(this,"Gorde botoia sakatu da",Toast.LENGTH_LONG )
                 return true
             }
-            R.id.gorde -> {
+            R.id.altzarizerrenda -> {
                 Toast.makeText(this,"Ireki botoia sakatu da",Toast.LENGTH_LONG )
                 return true
+            }
+            R.id.saioaitxi -> {
+                Toast.makeText(this, "Saioa ITXI egin da", Toast.LENGTH_LONG).show()
+                return true
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+
+                finish()
             }
             R.id.irten -> {
                 finish()

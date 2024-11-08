@@ -18,4 +18,10 @@
 
     //CheckBox Izenak
     <string name="chkAdina">Baldintzak eta terminoak onartzen dituzu</string>
+
+    //Menu Izenak
+    <string name="altzari_berria">Altzari Berria Gehitu</string>
+    <string name="altzari_zerrenda">Altzarien Zerrenda</string>
+    <string name="saioa_itxi">Saioa Itxi</string>
+    <string name="irten">Irten</string>
 </resources>
