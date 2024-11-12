@@ -20,8 +20,6 @@ class MainActivity : AppCompatActivity() {
         val screemSplash=installSplashScreen()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
         //HASIERAKETAK
         PostaElektronikoa = findViewById(R.id.txtPosta)
         Pasahitza = findViewById(R.id.txtPass)
