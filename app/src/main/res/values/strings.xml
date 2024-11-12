@@ -31,11 +31,15 @@
     <string name="lblAltzaria">Altzari Izena</string>
     <string name="lblAltzariMota">Altzari Mota</string>
     <string name="lblMaterialMota">Material Mota</string>
+    <string name="lblDimentsioak">Dimentsioak</string>
+    <string name="lblPrezioa">Prezioa</string>
 
-    <string name="chkUra">Ura</string>
-    <string name="chkMetala">Metala</string>
-    <string name="chkPlastikoa">Plastikoa</string>
-    <string name="chkKristala">Kristala</string>
+    <string name="chkBox1">Egurra</string>
+    <string name="chkBox2">Metala</string>
+    <string name="chkBox3">Plastikoa</string>
+    <string name="chkBox4">Kristala</string>
+    <string name="chkBox5">Harria</string>
+    <string name="chkBox6">Larrua </string>
 
 
 </resources>
