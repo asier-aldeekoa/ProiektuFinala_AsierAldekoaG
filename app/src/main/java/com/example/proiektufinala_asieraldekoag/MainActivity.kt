@@ -2,6 +2,8 @@ package com.example.proiektufinala_asieraldekoag
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
@@ -18,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         val screemSplash=installSplashScreen()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
         //HASIERAKETAK
         PostaElektronikoa = findViewById(R.id.txtPosta)
         Pasahitza = findViewById(R.id.txtPass)

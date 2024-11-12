@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">ProiektuFinala_AsierAldekoaG</string>
+    <string name="logo_description">Logo de la aplicación</string>
     //Izenak MainActivity
-    <string name="lblErab">POSTA ELEKTRONIKOA: </string>
-    <string name="txtPosta">Jarri zure POSTA</string>
-    <string name="lblPass">PASAHITZA: </string>
-    <string name="txtPass">Jarri zure PASAHITZA</string>
+    <string name="lblErab">Posta-Elektronikoa</string>
+    <string name="txtPosta">Posta Elektronikoa</string>
+    <string name="lblPass">Pasahitza</string>
+    <string name="txtPass">Pasahitza</string>
     <string name="btnLogin">LOGIN</string>
     <string name="btnErregistratu">ERREGISTRATU</string>
 

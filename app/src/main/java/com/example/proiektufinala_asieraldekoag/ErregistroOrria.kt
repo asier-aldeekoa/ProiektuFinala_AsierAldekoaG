@@ -45,7 +45,7 @@ class ErregistroOrria : AppCompatActivity() {
         dbHelper = SQL_User_Database(this, "Altzairuen_Denda.db", null, 1)
 
         //Valores del SPINNER
-        val ListakoAukerak = arrayOf("Bartzelona","Madril","Valentzia")
+        val ListakoAukerak = arrayOf("Madril" , "Bartzelona" , "Valentzia" , "Sevilla" , "Zaragoza" , "Malaga" , "Bilbo" , "Alacant")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, ListakoAukerak)
         EgoitzaSpinner.setAdapter(adapter)
 
