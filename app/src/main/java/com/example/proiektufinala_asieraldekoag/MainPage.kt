@@ -22,7 +22,10 @@ class MainPage : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.altzariberria -> {
-                Toast.makeText(this,"Gorde botoia sakatu da",Toast.LENGTH_LONG )
+                val intent = Intent(this, ProductManagementActivity::class.java)
+                startActivity(intent)
+
+                finish()
                 return true
             }
             R.id.altzarizerrenda -> {
@@ -32,8 +35,8 @@ class MainPage : AppCompatActivity() {
             R.id.saioaitxi -> {
                 Toast.makeText(this, "Saioa ITXI egin da", Toast.LENGTH_LONG).show()
 
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
+                val intent1 = Intent(this, MainActivity::class.java)
+                startActivity(intent1)
 
                 finish()
                 return true

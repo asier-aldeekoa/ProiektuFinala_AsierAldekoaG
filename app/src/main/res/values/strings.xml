@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">ProiektuFinala_AsierAldekoaG</string>
+    <string name="logo_description">Proiektuko LOGOA</string>
     //Izenak MainActivity
-    <string name="lblErab">POSTA ELEKTRONIKOA: </string>
-    <string name="txtPosta">Jarri zure POSTA</string>
-    <string name="lblPass">PASAHITZA: </string>
-    <string name="txtPass">Jarri zure PASAHITZA</string>
+    <string name="lblErab">Posta-Elektronikoa</string>
+    <string name="txtPosta">Posta Elektronikoa</string>
+    <string name="lblPass">Pasahitza</string>
+    <string name="txtPass">Pasahitza</string>
     <string name="btnLogin">LOGIN</string>
     <string name="btnErregistratu">ERREGISTRATU</string>
 
@@ -24,4 +25,17 @@
     <string name="altzari_zerrenda">Altzarien Zerrenda</string>
     <string name="saioa_itxi">Saioa Itxi</string>
     <string name="irten">Irten</string>
+
+
+
+    <string name="lblAltzaria">Altzari Izena</string>
+    <string name="lblAltzariMota">Altzari Mota</string>
+    <string name="lblMaterialMota">Material Mota</string>
+
+    <string name="chkUra">Ura</string>
+    <string name="chkMetala">Metala</string>
+    <string name="chkPlastikoa">Plastikoa</string>
+    <string name="chkKristala">Kristala</string>
+
+
 </resources>
