@@ -8,7 +8,6 @@
     <string name="txtPass">Pasahitza</string>
     <string name="btnLogin">LOGIN</string>
     <string name="btnErregistratu">ERREGISTRATU</string>
-
     //Izenak ErregistroOrria
     <string name="txtErab">ERABILTZAILEA</string>
     <string name="txtPostaE">POSTA</string>
@@ -16,30 +15,25 @@
     <string name="btnEmakumea">Emakumea</string>
     <string name="btnBestea">Bestea</string>
     <string name="btnErregistroa">Erregistratu</string>
-
-    //CheckBox Izenak
     <string name="chkAdina">Baldintzak eta terminoak onartzen dituzu</string>
-
     //Menu Izenak
     <string name="altzari_berria">Altzari Berria Gehitu</string>
     <string name="altzari_zerrenda">Altzarien Zerrenda</string>
     <string name="saioa_itxi">Saioa Itxi</string>
     <string name="irten">Irten</string>
-
-
-
+    // Izenak ProductManagementActivity
     <string name="lblAltzaria">Altzari Izena</string>
     <string name="lblAltzariMota">Altzari Mota</string>
     <string name="lblMaterialMota">Material Mota</string>
     <string name="lblDimentsioak">Dimentsioak</string>
     <string name="lblPrezioa">Prezioa</string>
-
     <string name="chkBox1">Egurra</string>
     <string name="chkBox2">Metala</string>
     <string name="chkBox3">Plastikoa</string>
     <string name="chkBox4">Kristala</string>
     <string name="chkBox5">Harria</string>
     <string name="chkBox6">Larrua </string>
-
-
+    <string name="lblStock">Eskuragarri dago? </string>
+    <string name="chkStock">BAI</string>
+    <string name="btnAltzariGehitu">ALTZARIA GEHITU</string>
 </resources>

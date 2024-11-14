@@ -8,6 +8,7 @@
     tools:context=".ProductManagementActivity">
 
 <!-- Altzariaren izenburua (EditText) -->
+
     <TextView
         android:id="@+id/lblAltzaria"
         android:layout_width="wrap_content"
@@ -20,6 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp" />
+
     <EditText
         android:id="@+id/txtIzena"
         android:layout_width="0dp"
@@ -90,6 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/chkBox1" />
+
             <CheckBox
                 android:id="@+id/checkBox2"
                 android:layout_width="0dp"
@@ -177,6 +180,43 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lblPrezioa" />
-<!-- Eskuragarritasuna (CheckBox) -->
-<!-- Altzari Bat Gehitu (Button) -->
+    <!-- Eskuragarritasuna (CheckBox) -->
+
+    <TextView
+        android:id="@+id/lblStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/lblStock"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrezioa" />
+
+    <CheckBox
+        android:id="@+id/chkStock"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_weight="1"
+        android:text="@string/chkStock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.899"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrezioa" />
+    <!-- Altzari Bat Gehitu (Button) -->
+    <Button
+        android:id="@+id/btnAltzariGehitu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnAltzariGehitu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrezioa"
+        app:layout_constraintVertical_bias="0.606" />
 </androidx.constraintlayout.widget.ConstraintLayout>
