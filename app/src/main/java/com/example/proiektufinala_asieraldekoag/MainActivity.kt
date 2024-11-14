@@ -55,13 +55,9 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Saioa ongi hasi da!", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainPage::class.java)
             startActivity(intent)
-
-            Log.d("MainActivity", "Login successful, launching MainPage")
-
         } else {
             Toast.makeText(this, "Gmail-a edo pasahitza txarto dago", Toast.LENGTH_SHORT).show()
         }
-
         cursor.close()
         bd.close()
     }

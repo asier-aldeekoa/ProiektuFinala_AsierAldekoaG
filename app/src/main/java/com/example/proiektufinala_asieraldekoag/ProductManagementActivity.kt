@@ -1,12 +1,12 @@
 package com.example.proiektufinala_asieraldekoag
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class ProductManagementActivity : AppCompatActivity() {
@@ -41,7 +41,7 @@ class ProductManagementActivity : AppCompatActivity() {
         chkStock = findViewById(R.id.chkStock)
         GehituButton = findViewById(R.id.btnAltzariGehitu)
 
-        dbHelper = SQL_User_Database(this, "Altzairuen_Denda.db", null, 1)
+        dbHelper = SQL_User_Database(this, "Altzairuen_Denda.db", null, 2)
 
         //Valores del SPINNER
         val AltzariAukerak = arrayOf("Sofa" , "Mahaia" , "Aulkia" , "Ohea" , "Armairua" , "Bankua" , "Ispilua" , "Besaulkia")
@@ -53,6 +53,30 @@ class ProductManagementActivity : AppCompatActivity() {
         }
     }
     fun GehituProd() {
+        val altzariIzena = AltzariIzena.text.toString()
+        val altzariMota = AltzriMota.selectedItem.toString()
 
+        // Recoger los materiales seleccionados
+        val materiales = mutableListOf<String>()
+        if (chkEgurra.isChecked) materiales.add("Egurra")
+        if (chkMetala.isChecked) materiales.add("Metala")
+        if (chkPlastikoa.isChecked) materiales.add("Plastikoa")
+        if (chkKristala.isChecked) materiales.add("Kristala")
+        if (chkHarria.isChecked) materiales.add("Harria")
+        if (chkLarrua.isChecked) materiales.add("Larrua")
+        val materialesString = materiales.joinToString(", ")
+
+        val dimentsioak = Dimentsioak.text.toString()
+        val prezioa = Prezioa.text.toString().toDoubleOrNull() ?: 0.0
+        val stock = if (chkStock.isChecked) 1 else 0  // 1 si hay stock, 0 si no
+
+        // Llamar a la función para insertar el producto en la base de datos
+        val resultado = dbHelper.produktuGehitu(altzariIzena, altzariMota, materialesString, dimentsioak, prezioa, stock)
+
+        if (resultado != -1L) {
+            Toast.makeText(this, "Produktu berria gehitu da :)", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "Errorea produktua gehitzean", Toast.LENGTH_SHORT).show()
+        }
     }
 }

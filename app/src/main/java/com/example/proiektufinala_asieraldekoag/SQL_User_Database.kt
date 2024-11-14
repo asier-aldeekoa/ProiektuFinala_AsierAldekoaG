@@ -13,14 +13,19 @@ public class SQL_User_Database (
 ) : SQLiteOpenHelper(context, name, factory, version) {
 
     override fun onCreate(db: SQLiteDatabase) {
-        db.execSQL("CREATE TABLE erabiltzaileak( " + "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "erabiltzailea TEXT, " + "posta TEXT, " + "pass TEXT, " + "generoa TEXT)"
-        )
+        db.execSQL("""CREATE TABLE erabiltzaileak(id INTEGER PRIMARY KEY AUTOINCREMENT,erabiltzailea TEXT,posta TEXT,
+            pass TEXT,generoa TEXT)""")
+
+        db.execSQL("""CREATE TABLE produktuak(id INTEGER PRIMARY KEY AUTOINCREMENT,altzariIzena TEXT,altzariMota TEXT,
+            materiales TEXT,dimentsioak TEXT,prezioa REAL,stock INTEGER)""")
     }
 
-    override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
-        TODO("Not yet implemented")
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+        db.execSQL("DROP TABLE IF EXISTS erabiltzaileak")
+        db.execSQL("DROP TABLE IF EXISTS produktuak")
+        onCreate(db)
     }
+
 
     fun erabiltzaileaSartu(erabiltzailea: String, posta: String, pass: String, generoa: String): Long {
         val db = this.writableDatabase
@@ -30,7 +35,20 @@ public class SQL_User_Database (
             put("pass", pass)
             put("generoa", generoa)
         }
-
         return db.insert("erabiltzaileak", null, values)
+    }
+
+    fun produktuGehitu(altzariIzena: String, altzariMota: String, materiales: String,
+        dimentsioak: String, prezioa: Double, stock: Int): Long {
+        val db = this.writableDatabase
+        val values = ContentValues().apply {
+            put("altzariIzena", altzariIzena)
+            put("altzariMota", altzariMota)
+            put("materiales", materiales)
+            put("dimentsioak", dimentsioak)
+            put("prezioa", prezioa)
+            put("stock", stock)
+        }
+        return db.insert("produktuak", null, values)
     }
 }

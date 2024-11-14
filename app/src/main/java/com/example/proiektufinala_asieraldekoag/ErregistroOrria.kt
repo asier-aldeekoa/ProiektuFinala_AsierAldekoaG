@@ -96,7 +96,7 @@ class ErregistroOrria : AppCompatActivity() {
             Toast.makeText(this, "Erabiltzaile berria erregistratu egin da :)", Toast.LENGTH_SHORT).show()
             limpiarCampos()
         } else {
-            Toast.makeText(this, "Errores erabiltzailea erregistratzean", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Errorea erabiltzailea erregistratzean", Toast.LENGTH_SHORT).show()
         }
     }
     //Erregistroa egitean eremu guztiak garbitu
