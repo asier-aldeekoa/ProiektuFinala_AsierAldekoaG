@@ -41,7 +41,7 @@ class ProductManagementActivity : AppCompatActivity() {
         chkStock = findViewById(R.id.chkStock)
         GehituButton = findViewById(R.id.btnAltzariGehitu)
 
-        dbHelper = SQL_User_Database(this, "Altzairuen_Denda.db", null, 2)
+        dbHelper = SQL_User_Database(this, "Altzairuen_Denda.db", null, 1)
 
         //Valores del SPINNER
         val AltzariAukerak = arrayOf("Sofa" , "Mahaia" , "Aulkia" , "Ohea" , "Armairua" , "Bankua" , "Ispilua" , "Besaulkia")

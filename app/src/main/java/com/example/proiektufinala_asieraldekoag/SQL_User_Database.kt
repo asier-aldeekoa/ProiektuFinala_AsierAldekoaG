@@ -21,9 +21,11 @@ public class SQL_User_Database (
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        db.execSQL("DROP TABLE IF EXISTS erabiltzaileak")
-        db.execSQL("DROP TABLE IF EXISTS produktuak")
-        onCreate(db)
+        if (oldVersion < 2) {
+            db.execSQL("DROP TABLE IF EXISTS erabiltzaileak")
+            db.execSQL("DROP TABLE IF EXISTS produktuak")
+            onCreate(db)
+        }
     }
 
 
@@ -39,7 +41,7 @@ public class SQL_User_Database (
     }
 
     fun produktuGehitu(altzariIzena: String, altzariMota: String, materiales: String,
-        dimentsioak: String, prezioa: Double, stock: Int): Long {
+                       dimentsioak: String, prezioa: Double, stock: Int): Long {
         val db = this.writableDatabase
         val values = ContentValues().apply {
             put("altzariIzena", altzariIzena)
