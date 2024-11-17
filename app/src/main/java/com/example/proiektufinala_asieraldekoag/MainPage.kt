@@ -28,9 +28,7 @@ class MainPage : AppCompatActivity() {
                 return true
             }
             R.id.altzarizerrenda -> {
-                //val intent = Intent(this, ProductListActivity::class.java)
-                startActivity(intent)
-                return true
+
             }
             R.id.saioaitxi -> {
                 Toast.makeText(this, "Saioa ITXI egin da", Toast.LENGTH_LONG).show()
