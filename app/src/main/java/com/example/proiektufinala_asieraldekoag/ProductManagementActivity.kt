@@ -1,5 +1,6 @@
 package com.example.proiektufinala_asieraldekoag
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -70,11 +71,16 @@ class ProductManagementActivity : AppCompatActivity() {
         val prezioa = Prezioa.text.toString().toDoubleOrNull() ?: 0.0
         val stock = if (chkStock.isChecked) 1 else 0  // 1 si hay stock, 0 si no
 
-        // Llamar a la función para insertar el producto en la base de datos
+        // Llamada a la función para insertar el producto en la base de datos
         val resultado = dbHelper.produktuGehitu(altzariIzena, altzariMota, materialesString, dimentsioak, prezioa, stock)
 
         if (resultado != -1L) {
             Toast.makeText(this, "Produktu berria gehitu da :)", Toast.LENGTH_SHORT).show()
+
+            // Intent para redirigir a la MainActivity
+            val intent = Intent(this, MainPage::class.java)
+            startActivity(intent)
+            finish()
         } else {
             Toast.makeText(this, "Errorea produktua gehitzean", Toast.LENGTH_SHORT).show()
         }

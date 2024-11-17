@@ -24,12 +24,12 @@ class MainPage : AppCompatActivity() {
             R.id.altzariberria -> {
                 val intent = Intent(this, ProductManagementActivity::class.java)
                 startActivity(intent)
-
                 finish()
                 return true
             }
             R.id.altzarizerrenda -> {
-                Toast.makeText(this,"Ireki botoia sakatu da",Toast.LENGTH_LONG )
+                //val intent = Intent(this, ProductListActivity::class.java)
+                startActivity(intent)
                 return true
             }
             R.id.saioaitxi -> {
