@@ -5,9 +5,6 @@
         android:id="@+id/altzariberria"
         android:title="@string/altzari_berria" />
     <item
-        android:id="@+id/altzarizerrenda"
-        android:title="@string/altzari_zerrenda" />
-    <item
         android:id="@+id/saioaitxi"
         android:title="@string/saioa_itxi" />
     <item

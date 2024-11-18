@@ -10,9 +10,9 @@ class NombreAdapter(private val produktuak: List<Produktu>) :
     RecyclerView.Adapter<NombreAdapter.NombreViewHolder>() {
 
     class NombreViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvIzena: TextView = itemView.findViewById(R.id.tvIzena)
-        val tvMota: TextView = itemView.findViewById(R.id.tvMota)
-        val tvPrezioa: TextView = itemView.findViewById(R.id.tvPrezioa)
+        val Izena: TextView = itemView.findViewById(R.id.tvIzena)
+        val Mota: TextView = itemView.findViewById(R.id.tvMota)
+        val Prezioa: TextView = itemView.findViewById(R.id.tvPrezioa)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NombreViewHolder {
@@ -23,9 +23,9 @@ class NombreAdapter(private val produktuak: List<Produktu>) :
 
     override fun onBindViewHolder(holder: NombreViewHolder, position: Int) {
         val produktua = produktuak[position]
-        holder.tvIzena.text = "Izena: ${produktua.izena}"
-        holder.tvMota.text = "Mota: ${produktua.mota}"
-        holder.tvPrezioa.text = "Prezioa: ${produktua.prezioa} €"
+        holder.Izena.text = "Izena: ${produktua.izena}"
+        holder.Mota.text = "Mota: ${produktua.mota}"
+        holder.Prezioa.text = "Prezioa: ${produktua.prezioa} €"
     }
 
     override fun getItemCount(): Int {
