@@ -10,7 +10,6 @@ class NombreAdapter(private val produktuak: List<Produktu>) :
     RecyclerView.Adapter<NombreAdapter.NombreViewHolder>() {
 
     class NombreViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvId: TextView = itemView.findViewById(R.id.tvId)
         val tvIzena: TextView = itemView.findViewById(R.id.tvIzena)
         val tvMota: TextView = itemView.findViewById(R.id.tvMota)
         val tvPrezioa: TextView = itemView.findViewById(R.id.tvPrezioa)
