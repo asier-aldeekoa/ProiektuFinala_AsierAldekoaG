@@ -53,4 +53,28 @@ class SQL_User_Database (
         }
         return db.insert("produktuak", null, values)
     }
+
+    fun getProduktuak(): List<Produktu> {
+        val produktuak = ArrayList<Produktu>()
+        val db = this.readableDatabase
+
+        // Seleccionar solo las columnas necesarias
+        val query = "SELECT id, altzariIzena, altzariMota, prezioa FROM produktuak"
+        val cursor = db.rawQuery(query, null)
+
+        if (cursor.moveToFirst()) {
+            do {
+                val id = cursor.getInt(cursor.getColumnIndexOrThrow("id"))
+                val izena = cursor.getString(cursor.getColumnIndexOrThrow("altzariIzena"))
+                val mota = cursor.getString(cursor.getColumnIndexOrThrow("altzariMota"))
+                val prezioa = cursor.getDouble(cursor.getColumnIndexOrThrow("prezioa"))
+
+                // Crear un objeto de tipo Produktu y añadirlo a la lista
+                produktuak.add(Produktu(id, izena, mota, prezioa))
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        return produktuak
+    }
+
 }

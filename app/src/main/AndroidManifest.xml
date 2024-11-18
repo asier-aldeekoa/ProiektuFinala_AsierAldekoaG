@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight"
         tools:targetApi="31">
-
+        <activity
+            android:name=".ProductListActivity"
+            android:exported="false" />
         <activity
             android:name=".ProductManagementActivity"
             android:exported="false" />

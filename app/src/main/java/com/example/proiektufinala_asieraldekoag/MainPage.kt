@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 
 class MainPage : AppCompatActivity() {
@@ -28,7 +27,9 @@ class MainPage : AppCompatActivity() {
                 return true
             }
             R.id.altzarizerrenda -> {
-
+                val intent = Intent(this, ProductListActivity::class.java)
+                startActivity(intent)
+                return true
             }
             R.id.saioaitxi -> {
                 Toast.makeText(this, "Saioa ITXI egin da", Toast.LENGTH_LONG).show()
