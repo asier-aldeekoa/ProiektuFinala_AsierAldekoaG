@@ -36,4 +36,7 @@
     <string name="lblStock">Eskuragarri dago? </string>
     <string name="chkStock">BAI</string>
     <string name="btnAltzariGehitu">ALTZARIA GEHITU</string>
+
+    <string name="btnEguneratu">Produktua Eguneratu</string>
+    <string name="btnBueltatu">BUELTATU</string>
 </resources>

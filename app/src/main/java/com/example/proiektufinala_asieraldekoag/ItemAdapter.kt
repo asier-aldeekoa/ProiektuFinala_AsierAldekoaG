@@ -1,5 +1,6 @@
 package com.example.proiektufinala_asieraldekoag
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class NombreAdapter(
-    private val produktuak: List<Produktu>,
+    private val produktuak: List<ListaProduktu>,
     private val onDeleteClick: (Int) -> Unit
 ) : RecyclerView.Adapter<NombreAdapter.NombreViewHolder>() {
 
@@ -15,6 +16,7 @@ class NombreAdapter(
         val Izena: TextView = itemView.findViewById(R.id.tvIzena)
         val Mota: TextView = itemView.findViewById(R.id.tvMota)
         val Prezioa: TextView = itemView.findViewById(R.id.tvPrezioa)
+        val btnEditar: View = itemView.findViewById(R.id.btnEditar)
         val btnBorrar: View = itemView.findViewById(R.id.btnBorrar)
     }
 
@@ -30,6 +32,11 @@ class NombreAdapter(
         holder.Mota.text = "Mota: ${produktua.mota}"
         holder.Prezioa.text = "Prezioa: ${produktua.prezioa} €"
 
+        holder.btnEditar.setOnClickListener {
+            val intent = Intent(holder.itemView.context, ProduktuaEditatu::class.java)
+            intent.putExtra("productoId", produktua.id)
+            holder.itemView.context.startActivity(intent)
+        }
         holder.btnBorrar.setOnClickListener {
             onDeleteClick(produktua.id)
         }
