@@ -77,4 +77,9 @@ class SQL_User_Database (
         return produktuak
     }
 
+    fun deleteProduct(productId: Int): Int {
+        val db = this.writableDatabase
+        return db.delete("produktuak", "id = ?", arrayOf(productId.toString()))
+    }
+
 }

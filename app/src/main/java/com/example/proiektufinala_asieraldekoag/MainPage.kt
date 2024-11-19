@@ -3,6 +3,7 @@ package com.example.proiektufinala_asieraldekoag
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.app.AlertDialog
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -18,24 +19,52 @@ class MainPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_list)
 
-        // Inicializar la base de datos
         databaseHelper = SQL_User_Database(this, "Altzairuen_Denda.db", null, 1)
 
-        // Obtener la lista de productos desde la base de datos
         val produktuakList = databaseHelper.getProduktuak()
 
-        // Configurar el RecyclerView
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = NombreAdapter(produktuakList)
+
+        adapter = NombreAdapter(produktuakList) { productId ->
+            mostrarDialogoDeBorrado(productId)
+        }
         recyclerView.adapter = adapter
     }
-    //Una funcion que sobreescriba el menu
+
+    private fun mostrarDialogoDeBorrado(productId: Int) {
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage("Seguru zaude produktu hau ezabatu nahi duzula?")
+
+        builder.setPositiveButton("Bai") { dialog, _ ->
+            val rowsDeleted = databaseHelper.deleteProduct(productId)
+            if (rowsDeleted > 0) {
+                Toast.makeText(this, "Produktua ezabatu egin da", Toast.LENGTH_SHORT).show()
+                actualizarRecyclerView()
+            } else {
+                Toast.makeText(this, "Ez da posible produktua ezabatzea", Toast.LENGTH_SHORT).show()
+            }
+            dialog.dismiss()
+        }
+        builder.setNegativeButton("Ez") { dialog, _ ->
+            dialog.dismiss()
+        }
+        builder.show()
+    }
+
+    private fun actualizarRecyclerView() {
+        val updatedList = databaseHelper.getProduktuak()
+        adapter = NombreAdapter(updatedList) { productId ->
+            mostrarDialogoDeBorrado(productId)
+        }
+        recyclerView.adapter = adapter
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         return true
     }
-    //Una funcion que sobreescriba la funcionpara q actuen nuestros botones
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.altzariberria -> {
@@ -46,16 +75,13 @@ class MainPage : AppCompatActivity() {
             }
             R.id.saioaitxi -> {
                 Toast.makeText(this, "Saioa ITXI egin da", Toast.LENGTH_LONG).show()
-
                 val intent1 = Intent(this, MainActivity::class.java)
                 startActivity(intent1)
-
                 finish()
                 return true
             }
             R.id.irten -> {
                 finishAffinity()
-                System.exit(0)
                 return true
             }
         }

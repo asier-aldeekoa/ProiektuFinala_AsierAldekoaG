@@ -6,13 +6,16 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class NombreAdapter(private val produktuak: List<Produktu>) :
-    RecyclerView.Adapter<NombreAdapter.NombreViewHolder>() {
+class NombreAdapter(
+    private val produktuak: List<Produktu>,
+    private val onDeleteClick: (Int) -> Unit
+) : RecyclerView.Adapter<NombreAdapter.NombreViewHolder>() {
 
     class NombreViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val Izena: TextView = itemView.findViewById(R.id.tvIzena)
         val Mota: TextView = itemView.findViewById(R.id.tvMota)
         val Prezioa: TextView = itemView.findViewById(R.id.tvPrezioa)
+        val btnBorrar: View = itemView.findViewById(R.id.btnBorrar)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NombreViewHolder {
@@ -26,6 +29,10 @@ class NombreAdapter(private val produktuak: List<Produktu>) :
         holder.Izena.text = "Izena: ${produktua.izena}"
         holder.Mota.text = "Mota: ${produktua.mota}"
         holder.Prezioa.text = "Prezioa: ${produktua.prezioa} €"
+
+        holder.btnBorrar.setOnClickListener {
+            onDeleteClick(produktua.id)
+        }
     }
 
     override fun getItemCount(): Int {
