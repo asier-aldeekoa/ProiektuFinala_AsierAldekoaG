@@ -76,6 +76,8 @@ class ProduktuaEditatu : AppCompatActivity() {
 
             setResult(RESULT_OK)
             finish()
+            val intent1 = Intent(this, MainPage::class.java)
+            startActivity(intent1)
         }
     }
 }
