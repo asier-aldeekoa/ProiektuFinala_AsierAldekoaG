@@ -3,17 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/backgroundColor"
-    android:padding="16dp">
+    android:layout_height="wrap_content">
 
     <!-- LinearLayout dentro de ConstraintLayout -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/bg_card"
-        android:elevation="4dp"
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,28 +21,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="20sp"
-            android:textColor="@color/primaryTextColor"
-            android:fontFamily="sans-serif-medium" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tvMota"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="20sp"
-            android:textColor="@color/secondaryTextColor"
-            android:fontFamily="sans-serif" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tvPrezioa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textColor="@color/priceColor"
+            android:textColor="#00FF00"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed" />
+            android:textStyle="bold" />
 
         <!-- ConstraintLayout para organizar los botones -->
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -58,10 +49,8 @@
                 android:id="@+id/btnEditar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/buttonPrimary"
                 android:text="Editar"
                 android:textColor="@android:color/white"
-                android:fontFamily="sans-serif-medium"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
@@ -70,10 +59,8 @@
                 android:id="@+id/btnBorrar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/buttonDanger"
                 android:text="Borrar"
                 android:textColor="@android:color/white"
-                android:fontFamily="sans-serif-medium"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />

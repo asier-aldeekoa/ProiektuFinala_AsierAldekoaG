@@ -77,7 +77,7 @@ class ProductManagementActivity : AppCompatActivity() {
         if (resultado != -1L) {
             Toast.makeText(this, "Produktu berria gehitu da :)", Toast.LENGTH_SHORT).show()
 
-            // Intent para redirigir a la MainActivity
+            // Intent para redirigir a la MainActivityy
             val intent = Intent(this, MainPage::class.java)
             startActivity(intent)
             finish()

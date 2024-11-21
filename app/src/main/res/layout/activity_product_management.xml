@@ -10,7 +10,7 @@
     <!-- Altzariaren izenburua (EditText) -->
 
     <TextView
-        android:id="@+id/lblEmail"
+        android:id="@+id/lblAltzaria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lblAltzaria"
@@ -32,8 +32,7 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lblEmail" />
-
+        app:layout_constraintTop_toBottomOf="@id/lblAltzaria" />
     <!-- Mota (Spinner aukerak: Sofa, Mahaia, Aulkia, Ohea -->
     <TextView
         android:id="@+id/lblAltzariMota"
@@ -47,7 +46,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtIzena" />
-
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="0dp"
@@ -58,7 +56,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lblAltzariMota" />
-
     <!-- Materiala (CheckBox: Ura, Metala, Plastikoa, Kristala) -->
     <TextView
         android:id="@+id/lblMaterialMota"
@@ -102,7 +99,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/chkBox2" />
-
             <CheckBox
                 android:id="@+id/checkBox3"
                 android:layout_width="0dp"
@@ -110,7 +106,6 @@
                 android:layout_weight="1"
                 android:text="@string/chkBox3" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -121,14 +116,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/chkBox4" />
-
             <CheckBox
                 android:id="@+id/checkBox5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/chkBox5" />
-
             <CheckBox
                 android:id="@+id/checkBox6"
                 android:layout_width="0dp"
@@ -137,7 +130,6 @@
                 android:text="@string/chkBox6" />
         </LinearLayout>
     </LinearLayout>
-
     <!-- Dimentsioak (EditText) -->
     <TextView
         android:id="@+id/lblDimentsioak"
@@ -151,7 +143,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
     <EditText
         android:id="@+id/txtDimentsioak"
         android:layout_width="0dp"
@@ -161,9 +152,9 @@
         android:layout_marginEnd="24dp"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lblDimentsioak" />
-
     <!-- Prezioa (EditText) -->
     <TextView
         android:id="@+id/lblPrezioa"
@@ -177,7 +168,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtDimentsioak" />
-
     <EditText
         android:id="@+id/txtPrezioa"
         android:layout_width="0dp"
@@ -187,17 +177,16 @@
         android:layout_marginEnd="24dp"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lblPrezioa" />
-
     <!-- Eskuragarritasuna (CheckBox) -->
 
-    <!-- Altzari Bat Gehitu (Button) -->
     <TextView
         android:id="@+id/lblStock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:text="@string/lblStock"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -211,20 +200,18 @@
         android:id="@+id/chkStock"
         android:layout_width="172dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="25dp"
         android:layout_weight="1"
         android:text="@string/chkStock"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPrezioa" />
-
+    <!-- Altzari Bat Gehitu (Button) -->
     <Button
         android:id="@+id/btnAltzariGehitu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#DC143C"
-        android:textColor="@android:color/white"
         android:text="@string/btnAltzariGehitu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

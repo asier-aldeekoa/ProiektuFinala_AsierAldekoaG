@@ -30,7 +30,6 @@ class ProduktuaEditatu : AppCompatActivity() {
         val txtPrezioa: EditText = findViewById(R.id.txtPrezioa)
         val btnEguneratu: Button = findViewById(R.id.btnEguneratu)
 
-
         val motaOptions = arrayOf(
             "Sofa", "Mahaia", "Aulkia", "Ohea", "Armairua", "Bankua", "Ispilua", "Besaulkia"
         )
