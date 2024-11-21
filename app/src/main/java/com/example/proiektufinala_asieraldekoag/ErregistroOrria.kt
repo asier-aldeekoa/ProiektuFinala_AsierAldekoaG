@@ -27,10 +27,11 @@ class ErregistroOrria : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_erregistro_orria)
+
         //HASIERAKETAK
         Erabiltzailea = findViewById(R.id.txtErab)
         PostaElektronikoa = findViewById(R.id.txtPostaE)
-        Pasahitza= findViewById(R.id.txtPass)
+        Pasahitza = findViewById(R.id.txtPass)
         Gizona = findViewById(R.id.btnGizona)
         Emakumea = findViewById(R.id.btnEmakumea)
         Bestea = findViewById(R.id.btnBestea)
@@ -38,16 +39,25 @@ class ErregistroOrria : AppCompatActivity() {
         EgoitzaSpinner = findViewById(R.id.spnEgoitza)
         Erregistratu = findViewById(R.id.btnErregistroa)
 
+        // Configuración de la base de datos
         dbHelper = SQL_User_Database(this, "Altzairuen_Denda.db", null, 1)
 
-
-        //Valores del SPINNER
-        val ListakoAukerak = arrayOf("Madril" , "Bartzelona" , "Valentzia" , "Sevilla" , "Zaragoza" , "Malaga" , "Bilbo" , "Alacant")
+        // Valores del SPINNER
+        val ListakoAukerak = arrayOf("Madril", "Bartzelona", "Valentzia", "Sevilla", "Zaragoza", "Malaga", "Bilbo", "Alacant")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, ListakoAukerak)
         EgoitzaSpinner.setAdapter(adapter)
 
-        Erregistratu.setOnClickListener(){
+        // Acción del botón "Erregistroa"
+        Erregistratu.setOnClickListener {
             Erregistro()
+        }
+
+        // Acción del botón "Bueltatu"
+        val Bueltatu: Button = findViewById(R.id.btnBueltatu)
+        Bueltatu.setOnClickListener {
+            // Inicia MainActivity
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
     fun Erregistro() {

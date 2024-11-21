@@ -29,6 +29,7 @@ class ProduktuaEditatu : AppCompatActivity() {
         val txtDimentsioak: EditText = findViewById(R.id.txtDimentsioak)
         val txtPrezioa: EditText = findViewById(R.id.txtPrezioa)
         val btnEguneratu: Button = findViewById(R.id.btnEguneratu)
+        val btnBueltatu: Button = findViewById(R.id.btnBueltatu) // Obtener btnBueltatu
 
         val motaOptions = arrayOf(
             "Sofa", "Mahaia", "Aulkia", "Ohea", "Armairua", "Bankua", "Ispilua", "Besaulkia"
@@ -55,6 +56,7 @@ class ProduktuaEditatu : AppCompatActivity() {
         }
         cursor.close()
 
+        // Acción para el botón Eguneratu
         btnEguneratu.setOnClickListener {
             val nuevoNombre = txtIzena.text.toString()
             val nuevaMota = spinnerMota.selectedItem.toString()
@@ -76,8 +78,15 @@ class ProduktuaEditatu : AppCompatActivity() {
 
             setResult(RESULT_OK)
             finish()
+
             val intent1 = Intent(this, MainPage::class.java)
             startActivity(intent1)
+        }
+
+        // Acción para el botón Bueltatu
+        btnBueltatu.setOnClickListener {
+            val intent = Intent(this, MainPage::class.java)
+            startActivity(intent)  // Navegar a la actividad MainPage
         }
     }
 }
