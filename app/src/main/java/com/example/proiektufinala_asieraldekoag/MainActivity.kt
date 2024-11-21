@@ -2,9 +2,6 @@ package com.example.proiektufinala_asieraldekoag
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -40,6 +37,11 @@ class MainActivity : AppCompatActivity() {
 
         if (postaE.isEmpty() || pasahitza.isEmpty()) {
             Toast.makeText(this, "Mesedez datu guztiak sartu", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        if (!postaE.contains("@gmail.com") && !postaE.contains("@hotmail.com")) {
+            Toast.makeText(this, "Mesedez, sartu Gmail edo Hotmail posta bat", Toast.LENGTH_SHORT).show()
             return
         }
 

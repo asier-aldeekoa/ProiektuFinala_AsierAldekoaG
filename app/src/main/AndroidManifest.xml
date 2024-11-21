@@ -16,12 +16,6 @@
             android:name=".ProduktuaEditatu"
             android:exported="false" />
         <activity
-            android:name=".ProductDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProductListActivity"
-            android:exported="false" />
-        <activity
             android:name=".ProductManagementActivity"
             android:exported="false" />
         <activity
