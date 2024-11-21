@@ -79,8 +79,15 @@ class ErregistroOrria : AppCompatActivity() {
             else -> ""
         }
 
+        // Comprobar si el correo electrónico tiene los dominios @gmail.com o @hotmail.com
+        val correoValido = posta.endsWith("@gmail.com") || posta.endsWith("@hotmail.com")
+
         return if (erab.isEmpty() || posta.isEmpty() || pass.isEmpty() || generoa.isEmpty() || !Baldintzak.isChecked) {
             Toast.makeText(this, "Mesedez, bete eremu guztiak eta onartu baldintzak", Toast.LENGTH_SHORT).show()
+            false
+        } else if (!correoValido) {
+            // Mostrar un mensaje si el correo no es válido
+            Toast.makeText(this, "Posta elektronikoa ezin da izan besterik gabe: @gmail.com edo @hotmail.com", Toast.LENGTH_SHORT).show()
             false
         } else {
             true
